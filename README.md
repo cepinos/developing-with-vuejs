@@ -5,3 +5,4 @@
 ## Step-3: Reactive Data Binding Explanation
 ![Alt text](assets/mvvm.png?raw=true "MVVM")
 ## Step-4: Lists, Mutation methods
+## Step-5: Methods

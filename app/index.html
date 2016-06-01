@@ -26,6 +26,8 @@
     <![endif]-->
 
     <div id="app">
+        <!-- FIXME: Create an add button -->
+        <button v-on:click="reverse()">Reverse</button>
         <div v-for="item in list">
             {{ item.message }}
         </div>

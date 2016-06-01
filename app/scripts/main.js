@@ -11,5 +11,10 @@ var model = {
 
 new Vue({
   el: '#app',
-  data: model
+  data: model,
+  methods: {
+    reverse: function(){
+      this.list.reverse()
+    }
+  }
 })
