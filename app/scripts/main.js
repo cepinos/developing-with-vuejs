@@ -13,8 +13,8 @@ new Vue({
   el: '#app',
   data: model,
   methods: {
-    reverse: function(){
-      this.list.reverse()
+    add: function(message){
+      this.list.push({message: message})
     }
   }
 })
