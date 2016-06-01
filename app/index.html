@@ -26,7 +26,9 @@
     <![endif]-->
 
     <div id="app">
-        {{ message }}
+        <div v-for="item in list">
+            {{ item.message }}
+        </div>
     </div>
 
     <!-- build:js scripts/vendor.js -->
