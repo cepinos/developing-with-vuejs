@@ -1,7 +1,6 @@
 var Notes = {
   filter: '',
-  // FIXME: Add var to set message for new notes
-  ______: '',
+  noteText: '',
   list: [
     {message: 'message 1'},
     {message: 'message 2'},
@@ -18,8 +17,7 @@ new Vue({
   methods: {
     add: function(){
       this.list.push({
-        // FIXME: Set message for new notes
-        message: this.______
+        message: this.noteText
       })
     }
   }
