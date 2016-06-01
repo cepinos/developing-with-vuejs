@@ -26,9 +26,35 @@
     <![endif]-->
 
     <div id="app">
-        <input type="text" v-model="filter">
-        <div v-for="item in list | filterBy filter">
-            {{ item.message | capitalize}}
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4">
+                    <div class="notes">
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+                            <!-- FIXME: Use model 'search' for filtering the notes list -->
+                            <input id="search" v-model="___" type="text" class="form-control" placeholder="Filter">
+                        </div>
+                        <ul class="notes__list">
+                            <!-- FIXME: Render a list of notes using v-for directive, add filter by search-->
+                            <li v-for="note in ____ | filterBy ___" class="notes__note">
+                                <span>{{ note.message }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-xs-8">
+                    <div class="row actions">
+                        <div class="col-xs-12">
+                            <button v-on:click="add()" class="btn btn-default">New note</button>
+                        </div>
+                    </div>
+                    <div class="note">
+                        <!-- FIXME: Set model var message for new note -->
+                        <textarea v-model="______" class="note__edit" placeholder="Insert note...">{{ ______ }}</textarea>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -1,5 +1,7 @@
-var model = {
+var Notes = {
   filter: '',
+  // FIXME: Add var to set message for new notes
+  ______: '',
   list: [
     {message: 'message 1'},
     {message: 'message 2'},
@@ -12,10 +14,13 @@ var model = {
 
 new Vue({
   el: '#app',
-  data: model,
+  data: Notes,
   methods: {
-    add: function(message){
-      this.list.push({message: message})
+    add: function(){
+      this.list.push({
+        // FIXME: Set message for new notes
+        message: this.______
+      })
     }
   }
 })
