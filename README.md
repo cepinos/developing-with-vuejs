@@ -7,3 +7,4 @@
 ## Step-4: Lists, Mutation methods
 ## Step-5: Methods
 ## Step-6: Filters
+## Step-6: All together
