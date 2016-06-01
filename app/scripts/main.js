@@ -1,6 +1,6 @@
 var Notes = {
   filter: '',
-  noteText: '',
+  current: {message: ''},
   list: [
     {message: 'message 1'},
     {message: 'message 2'},
@@ -16,9 +16,15 @@ new Vue({
   data: Notes,
   methods: {
     add: function(){
-      this.list.push({
-        message: this.noteText
-      })
+      var newNote = {
+        message: 'New note'
+      };
+      this.list.push(newNote);
+      this.current = newNote;
+    },
+    edit: function(index){
+      // FIXME: get note clicked
+      this.current = ______;
     }
   }
 })

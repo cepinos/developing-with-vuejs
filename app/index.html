@@ -35,7 +35,8 @@
                             <input id="search" v-model="search" type="text" class="form-control" placeholder="Filter">
                         </div>
                         <ul class="notes__list">
-                            <li v-for="note in list | filterBy search" class="notes__note">
+                            <!-- FIXME: add edit method using v-on:click directive use the special variable $index to identify the clicked note-->
+                            <li v-for="note in list | filterBy search" class="notes__note" v-on:click="______">
                                 <span>{{ note.message }}</span>
                             </li>
                         </ul>
@@ -48,7 +49,7 @@
                         </div>
                     </div>
                     <div class="note">
-                        <textarea v-model="noteText" class="note__edit" placeholder="Insert note...">{{ noteText }}</textarea>
+                        <textarea v-model="current.message" class="note__edit" placeholder="Insert note...">{{ current.message }}</textarea>
                     </div>
                 </div>
             </div>
