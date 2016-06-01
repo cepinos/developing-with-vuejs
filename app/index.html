@@ -37,6 +37,7 @@
                         <ul class="notes__list">
                             <li v-for="note in list | filterBy search" class="notes__note" v-on:click="edit($index)">
                                 <span>{{ note.message }}</span>
+                                <button v-on:click="remove($index)">X</button>
                             </li>
                         </ul>
                     </div>

@@ -23,8 +23,11 @@ new Vue({
       this.current = newNote;
     },
     edit: function(index){
-      // FIXME: get note clicked
       this.current = this.list[index];
+    },
+    remove: function(index){
+      this.list.splice(index, 1)
+      this.current = {}
     }
   }
 })
