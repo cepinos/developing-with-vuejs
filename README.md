@@ -6,3 +6,4 @@
 ![Alt text](assets/mvvm.png?raw=true "MVVM")
 ## Step-4: Lists, Mutation methods
 ## Step-5: Methods
+## Step-6: Filters

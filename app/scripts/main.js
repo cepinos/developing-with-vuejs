@@ -1,4 +1,5 @@
 var model = {
+  filter: '',
   list: [
     {message: 'message 1'},
     {message: 'message 2'},

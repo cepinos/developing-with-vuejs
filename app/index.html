@@ -26,9 +26,9 @@
     <![endif]-->
 
     <div id="app">
-        <button v-on:click="add('message')">add</button>
-        <div v-for="item in list">
-            {{ item.message }}
+        <input type="text" v-model="filter">
+        <div v-for="item in list | filterBy filter">
+            {{ item.message | capitalize}}
         </div>
     </div>
 
