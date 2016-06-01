@@ -24,7 +24,7 @@ new Vue({
     },
     edit: function(index){
       // FIXME: get note clicked
-      this.current = ______;
+      this.current = this.list[index];
     }
   }
 })
