@@ -25,6 +25,10 @@ new Vue({
     edit: function(index){
       // FIXME: get note clicked
       this.current = ______;
+    },
+    remove: function(index){
+      this.list.splice(index, 1);
+      this.current = {}
     }
   }
 })

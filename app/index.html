@@ -38,6 +38,8 @@
                             <!-- FIXME: add edit method using v-on:click directive use the special variable $index to identify the clicked note-->
                             <li v-for="note in list | filterBy search" class="notes__note" v-on:click="______">
                                 <span>{{ note.message }}</span>
+                                <!-- FIXME: add remove method using v-on:click directive use the special variable $index to identify the clicked remove note-->
+                                <button v-on:click="_______">x</button>
                             </li>
                         </ul>
                     </div>
