@@ -35,8 +35,9 @@
                             <input id="search" v-model="search" type="text" class="form-control" placeholder="Filter">
                         </div>
                         <ul class="notes__list">
-                            <li v-for="note in list | filterBy search in 'text'" class="notes__note">
-                                <span v-on:click="edit($index)" class="notes__note__text {{current(note.id)}}">{{ note.text | ellipsis }}</span>
+                            <li v-for="note in list | filterBy search" class="notes__note" v-on:click="edit($index)">
+                                <span>{{ note.message }}</span>
+                                <button v-on:click="remove($index)">X</button>
                             </li>
                         </ul>
                     </div>
@@ -44,15 +45,11 @@
                 <div class="col-xs-8">
                     <div class="row actions">
                         <div class="col-xs-12">
-                            <button v-on:click="add" class="btn btn-default">New note</button>
-                            <span v-if="currentNote.id">
-                                <button v-on:click="remove(currentNote.id)" class="btn btn-default">Remove</button>
-                                <span class="pull-right hidden-xs">Created at {{currentNote.createdAt}}</span>
-                            </span>
+                            <button v-on:click="add()" class="btn btn-default">New note</button>
                         </div>
                     </div>
-                    <div class="note" v-show="currentNote.id">
-                        <textarea v-model="currentNote.text" v-on:keyup="save" class="note__edit" placeholder="Insert note..." v-el:edit-note>{{ currentNote.text }}</textarea>
+                    <div class="note">
+                        <textarea v-model="current.message" class="note__edit" placeholder="Insert note...">{{ current.message }}</textarea>
                     </div>
                 </div>
             </div>
