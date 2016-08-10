@@ -1,5 +1,6 @@
 var Notes = {
   filter: '',
+  search: '',
   current: {message: ''},
   list: [
     {message: 'message 1'},
